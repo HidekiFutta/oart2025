@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="大放技投票フォーム" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base target="_top">
+  <title>大阪府診療放射線技師会第35回学術大会優秀演題投票フォーム</title>
+  <link rel="shortcut icon" href="https://static.wixstatic.com/ficons/a0f408_573c7996cdcd472b9fdbedd3ff704b9f~mv2.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://static.wixstatic.com/ficons/a0f408_573c7996cdcd472b9fdbedd3ff704b9f~mv2.ico">
+           <style>
+            @charset "UTF-8";
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                color: #333;
+                font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            }
+            
+            input:disabled,
+            select:disabled
+             {
+                background: #ccc;
+              }
+            
+            /* スマホだけに適用するCSS */
+            @media screen and ( max-width:1179px )
+            {
+              max-width:100%;
+                .contact /* 全体 */
+                {
+                    width: 100%;
+                    margin: 40px 10px; /*margin: 0 0; (上下)　(左右)*/
+                    padding: 20px 20px;
+                }
+            
+            .contact-ttl {  /* 表上部のタイトル1 */
+                font-size: 34px;
+                font-weight: bold;
+                margin-top: 50px;
+                text-align: center;
+            }
+            .contact-ttl2 {  /* 表上部のタイトル2 */
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 10px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .contact-comment {
+                font-size: 28px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            
+            .contact-table { /* 表全体 */
+                width: 70%;
+                margin: auto;
+                padding: 10px 10px;
+                border: 1px solid #ccc;
+            }
+            
+            .contact-body { /* 表の右部分 */
+                width: 60%;
+                font-size: 28px;
+                padding: 20px;
+                margin: 20px;
+                border: 1px solid #ccc;
+            }
+            .contact-body2 { /* 表の右部分 */
+                width: 60%;
+                font-size: 28px;
+                padding: 50px;
+                padding-left: 40px;
+                margin:60px;
+                border: 1px solid #ccc;
+            }
+
+            .contact-item { /* 表の左部分 */
+                width: 40%;
+                padding: 10px;
+                margin: 10px;
+                font-size: 28px;
+                text-align: center;      
+                background-color: #FAF;
+            }
+            
+           /* .form-text {
+                font-size: 12px;
+                width: 100%;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                max-width: 240px;
+            }
+            
+            .form-text3 {
+                font-size: 12px;
+                width: 100%;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                max-width: 80px;
+            }*/
+                       
+            .form-select {
+                font-size: 26px;
+                width: 260px;
+                height: 50px;
+                padding: 5px;
+                margin: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            
+            .contact-submit {
+                width: 400px;
+                background-color: rgb(26, 248, 6);
+                color: #fff;
+                font-weight: bold;
+                display: block;
+                margin: 0 auto;
+                font-size: 30px;
+                padding: 12px;
+                border-radius: 100vh;
+                border: none;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                cursor: pointer;
+            }
+            } 
+
+          @media screen and ( min-width:1180px )
+            {
+                .sp-only {
+                    display: none;
+                }
+
+                .contact {                
+                    width: 720px;
+                    margin: 0 auto;
+                    padding: 20px 0;
+                }
+            
+            .contact-ttl {
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+             .contact-ttl2 {
+                font-size: 26px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            .contact-comment {
+                font-size: 20px;
+                text-align: center;
+            }
+            
+            .contact-table {
+                width: 75%;
+                margin: auto;
+                border: 1px solid #ccc;
+            }
+
+           .contact-item,
+           .contact-body {
+                padding: 26px;           
+                border: 1px solid #ccc;
+            }
+            
+            .contact-item {
+                text-align: center;
+                width: 30%;
+                font-size: 18px;
+                background-color: #FFFFCC;
+            }
+            
+            .contact-body {
+                width: 70%;
+                font-size: 28px;
+            }
+
+            .contact-body2 { /* 表の右部分 */
+                width: 70%;
+                font-size: 28px;
+                padding: 30px;
+                padding-left: 30px;
+                margin:40px;
+                border: 1px solid #ccc;
+            }
+                        
+            .form-select {
+                width: 200px;
+                font-size: 18px;
+                height: 50px;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            
+            .contact-submit {
+                width: 250px;
+                background-color: rgb(6, 42, 248);
+                color: #fff;
+                font-weight: bold;
+                display: block;
+                margin: 0 auto;
+                font-size: 24px;
+                padding: 10px;
+                border-radius: 100vh;
+                border: none;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                cursor: pointer;
+            }
+            }      
+        </style>
+
+  <script>
+    function generateUUID() {
+      if (!localStorage.getItem('uuid')) {
+        const uuid = crypto.randomUUID();
+        localStorage.setItem('uuid', uuid);
+      }
+      return localStorage.getItem('uuid');
+    }
+
+    function getSelectedTheme() {
+      const radios = document.getElementsByName("selection");
+      for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          return radios[i].value;
+        }
+      }
+      return null;
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      const uuid = generateUUID();
+      const session = document.getElementById('session').value;
+      const select = getSelectedTheme();
+
+      if (!select || session === "" || session === "選択してください") {
+        alert("セッションと演題を選択してください。");
+        return;
+      }
+
+     // const form = document.createElement('form');
+     // form.method = 'POST';
+     // form.action = '<?= deployURL ?>';
+
+      const fields = {
+        uuid: uuid,
+        session: session,
+        select: select
+      };
+
+      for (const name in fields) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = fields[name];
+        form.appendChild(input);
+      }
+
+     // document.body.appendChild(form);
+    // form.submit();
+    }
+  </script>
+</head>
+
+<body>
+  <div class="contact">
+    <h1 class="contact-ttl" id="edit_area2">2025年度近畿地域診療放射線技師会</h1>
+    <h1 class="contact-ttl2" id="edit_area2">　学術大会　優秀演題投票フォーム</h1>
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZBcGDNHywqtDS5YgeZaM6kzBa4Y_EcyJtPR5d1C0s6Jl0Vg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+ 
+   <!--  <form onsubmit="handleSubmit(event)">  -->
+      <table class="contact-table">
+        <tr>
+          <th class="contact-item">セッション</th>
+          <td class="contact-body">
+            <select name="entry.1267223159" required="required" class="form-select" id="session">
+              <option value="選択してください">選択してください</option>
+              <option value="セッション１">セッション１</option>
+              <option value="セッション２">セッション２</option>
+              <option value="セッション３">セッション３</option>
+              <option value="セッション４">セッション４</option>
+              <option value="セッション５">セッション５</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <th class="contact-item">演題選択</th>
+          <td class="contact-body2">
+            <div>
+            <input type="radio" name="entry.440995443" id="s1" value="演題１" style="transform:scale(2.0);" required><label for="s1">　演題１　</label>
+            <div><br/>
+            <input type="radio" name="entry.440995443" id="s2" value="演題２" style="transform:scale(2.0);"><label for="s2">　演題２　</label>
+            </div><br/>
+            <div>
+            <input type="radio" name="entry.440995443" id="s3" value="演題３" style="transform:scale(2.0);"><label for="s3">　演題３　</label>
+            </div><br/>
+            <div>
+            <input type="radio" name="entry.440995443" id="s4" value="演題４" style="transform:scale(2.0);"><label for="s4">　演題４　</label>
+            </div><br/>
+            <div>
+            <input type="radio" name="entry.440995443" id="s5" value="演題５" style="transform:scale(2.0);"><label for="s5">　演題５　</label>
+            </div><br/>
+            <div>
+            <input type="radio" name="entry.440995443" id="s6" value="演題６" style="transform:scale(2.0);"><label for="s6">　演題６　</label>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <h2 class="contact-comment">
+        <font color="red">クリックは1回！</font><br/>　画面が切り替わるまでお待ちください
+      </h2>
+
+      <input class="contact-submit" id="submitButton" type="submit" name="submit" value="投　　票" />
+    </form>
+  </div>
+</body>
+</html>
