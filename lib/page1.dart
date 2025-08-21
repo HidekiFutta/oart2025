@@ -249,7 +249,7 @@ class Page1 extends StatelessWidget {
         );
       },
       child: const AutoSizeText(
-        'ワクチン筋注行為に関する実技講習会のご案内',
+        'ワクチン接種実技講習会のご案内',
         style: TextStyle(
           fontSize: 18, //テキストサイズ
         ),

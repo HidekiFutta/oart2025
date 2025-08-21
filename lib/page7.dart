@@ -18,7 +18,7 @@ class Page7 extends StatelessWidget {
     double screenHeight = screenSize.height;
     //double areaHei = screenHeight -(screenWidth/960*440);
     //960*440はcover1のサイズ
-    double high = screenHeight/8-35;
+    double high = screenHeight/9-35;
     double wid = screenWidth - 50;
     //double high = 50;
     Size buttonSize = Size(wid, high);
@@ -50,7 +50,7 @@ class Page7 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    height: 30,
+                    height: 35,
                     alignment: Alignment.center,
                     child: const Text(
                       "投票はWebからのみ行います",
@@ -123,7 +123,7 @@ class Page7 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.only(bottom: 40.0),
+                padding: const EdgeInsets.only(bottom: 70.0),
               ),
             ],
           ),
