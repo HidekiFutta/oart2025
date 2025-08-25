@@ -5,7 +5,7 @@
   "packages": [
     {
       "name": "oart",
-      "version": "1.0.5+2",
+      "version": "1.0.6+3",
       "dependencies": [
         "auto_size_text",
         "basic_utils",
