@@ -6,51 +6,28 @@ class Page3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // タイムテーブル画像のピクセルサイズ
-    double imageWidth = 1054; // 横幅
-    double imageHeight = 1618; // 縦幅
+    double imageWidth = 1054;
+    double imageHeight = 1618;
 
-    // 時間軸の縦ピクセル範囲
-    double timeStartPixel = 99; // 9:30 の縦位置
-    double timeEndPixel = 1585; // 17:00 の縦位置
-    double timePixelRange = timeEndPixel - timeStartPixel; // 有効時間軸のピクセル範囲
+    // 時間軸の縦ピクセル範囲（画像座標）
+    double timeStartPixel = 99;   // 9:30 の位置
+    double timeEndPixel = 1585;   // 17:00 の位置
+    double timePixelRange = timeEndPixel - timeStartPixel; // 1486px - 99px
 
     // 時間情報
-    int startTimeMinutes = 9 * 60 + 30; // 9:30 → 分単位（570分）
-    int endTimeMinutes = 17 * 60; // 17:00 → 分単位（1020分）
-    int totalTimeMinutes = endTimeMinutes - startTimeMinutes; // 総時間（480分）
+    int startTimeMinutes = 9 * 60 + 30;  // 570分（9:30）
+    int endTimeMinutes = 17 * 60;        // 1020分（17:00）
+    int totalTimeMinutes = endTimeMinutes - startTimeMinutes; // 450分
 
     // 現在時刻
     var now = DateTime.now();
-    int currentMinutes = now.hour * 60 + now.minute; // 現在の分単位の時間
-    int elapsedMinutes = currentMinutes - startTimeMinutes; // 開始時間からの経過時間
+    int currentMinutes = now.hour * 60 + now.minute;
+    int elapsedMinutes = currentMinutes - startTimeMinutes;
 
-    // 画面サイズ取得
-    Size screenSize = MediaQuery.of(context).size;
-    double statusBarHeight = MediaQuery.of(context).padding.top;
-    double bottomPadding = MediaQuery.of(context).padding.bottom;
-    double appbarHeight = 50; // アプリバーの高さ
-
-    // 実際に表示可能な高さ
-    double displayHeight = screenSize.height - statusBarHeight - bottomPadding - appbarHeight;
-    double screenWidth = screenSize.width;
-
-    // スケール計算（画面幅を基準）
-    double scale = screenWidth / imageWidth;
-    double scaledImageHeight = imageHeight * scale; // 画像の高さをスケール
-    double verticalPadding = (displayHeight - scaledImageHeight) / 2; // 上下余白
-
-    // 赤線の位置計算（スケールを考慮）
-    double posVertical = verticalPadding +
-        ((elapsedMinutes / totalTimeMinutes) * timePixelRange * scale) +
-        (timeStartPixel * scale);
-
-    // 赤線の横方向の位置
-    double leftPadding = 20 * scale; // 左側余白のピクセル数（スケール考慮）
-    double posLeft = leftPadding;
-    double barSize = (imageWidth - 40) * scale; // 外枠を考慮した幅
-
-    // 9時から17時の間のみ赤線を表示
+    // 赤線を表示するかどうか
     bool isInTimeRange = elapsedMinutes >= 0 && elapsedMinutes <= totalTimeMinutes;
+
+    double appbarHeight = 50;
 
     return Scaffold(
       appBar: PreferredSize(
@@ -60,38 +37,69 @@ class Page3 extends StatelessWidget {
           centerTitle: true,
         ),
       ),
-      body: SingleChildScrollView(
-        child: InteractiveViewer(
-          boundaryMargin: const EdgeInsets.all(20.0),
-          minScale: 1.0,
-          maxScale: 3.0,
-          child: Stack(
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          // 表示可能領域のサイズ
+          double displayWidth = constraints.maxWidth;
+          double displayHeight = constraints.maxHeight;
+
+          // 画像のアスペクト比
+          double imageAspect = imageWidth / imageHeight;
+          double displayAspect = displayWidth / displayHeight;
+
+          // 実際に表示される画像サイズ（BoxFit.contain と同じ計算）
+          double scaledWidth, scaledHeight;
+          if (displayAspect > imageAspect) {
+            // 横長 → 高さ基準
+            scaledHeight = displayHeight;
+            scaledWidth = imageAspect * scaledHeight;
+          } else {
+            // 縦長 → 幅基準
+            scaledWidth = displayWidth;
+            scaledHeight = scaledWidth / imageAspect;
+          }
+
+          // 上下左右余白
+          double verticalPadding = (displayHeight - scaledHeight) / 2;
+          double horizontalPadding = (displayWidth - scaledWidth) / 2;
+
+          // 赤線の縦位置（スケーリング後座標）
+          double posVertical = verticalPadding +
+              (timeStartPixel / imageHeight * scaledHeight) +
+              (elapsedMinutes / totalTimeMinutes) *
+                  (timePixelRange / imageHeight * scaledHeight);
+
+          // 赤線の横方向
+          double leftPadding = horizontalPadding + 20 / imageWidth * scaledWidth;
+          double barSize = scaledWidth - 40 / imageWidth * scaledWidth;
+
+          return Stack(
             children: [
               // タイムテーブル画像
               Center(
-                child: SizedBox(
-                  width: screenWidth,
-                  height: displayHeight, // ここを displayHeight に変更
-                  child: FittedBox(
-                    fit: BoxFit.contain,
-                    child: Image.asset('assets/images/timetable.jpg'),
+                child: FittedBox(
+                  fit: BoxFit.contain,
+                  child: Image.asset(
+                    'assets/images/timetable.jpg',
+                    width: imageWidth,
+                    height: imageHeight,
                   ),
                 ),
               ),
-              // 現在の時間を示す赤い線
-              if (isInTimeRange) // 9:30〜17:00 の間のみ赤線を表示
-               Positioned(
-                 top: posVertical - 2, // タブレットでのズレ補正
-                 left: posLeft,
-                 child: Container(
-                   width: barSize,
-                   height: 4,
-                   color: Colors.red.withValues(alpha:0.3),
-                 ),
-               ),
+              // 現在時刻が 9:30〜17:00 の範囲内なら赤線を表示
+              if (isInTimeRange)
+                Positioned(
+                  top: posVertical - 2,
+                  left: leftPadding,
+                  child: Container(
+                    width: barSize,
+                    height: 4,
+                    color: Colors.red.withValues(alpha:0.3),
+                  ),
+                ),
             ],
-          ),
-        ),
+          );
+        },
       ),
     );
   }
