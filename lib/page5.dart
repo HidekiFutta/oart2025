@@ -14,8 +14,7 @@ Map<String, Map<String, String>> extractSpeakers() {
     educationalLectures,
     specialLectures,
     publicLectures,
-    lunchLectures1,
-    lunchLectures2,
+    lunchLectures,
     generalResearchPresentations1,
     generalResearchPresentations2,
   ]) {

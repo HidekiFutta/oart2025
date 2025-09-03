@@ -34,22 +34,17 @@ class Page4 extends StatelessWidget {
                 lectures: publicLectures,
               ),
               SectionWidget(
-                title: "ランチョンセミナー1",
+                title: "ランチョンセミナー",
                 //theme: "",
-                lectures: lunchLectures1,
+                lectures: lunchLectures,
               ),
               SectionWidget(
-                title: "ランチョンセミナー2",
-                //theme: "",
-                lectures: lunchLectures2,
-              ),
-              SectionWidget(
-                title: "学生セッション",
+                title: "一般演題①",
                 //theme: "",
                 lectures: generalResearchPresentations1,
               ),
               SectionWidget(
-                title: "会員セッション",
+                title: "一般演題②",
                 // theme: "",
                 lectures: generalResearchPresentations2,
               ),
