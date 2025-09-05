@@ -11,9 +11,9 @@ import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:url_launcher/url_launcher.dart';
 
 final now = DateTime.now().toLocal();
-
 final kaisaiDay = DateTime(2025, 11, 16); //開始日
 final todayDay = DateTime(now.year, now.month, now.day);
 final diffDay = kaisaiDay.difference(todayDay).inDays;
@@ -557,7 +557,7 @@ class MyHomePageState extends State<MyHomePage> {
 }
 
 class VersionCheck {
-  static const String versionCheckUrl = "https://oart2025-5a199.web.app/latest-version.json";
+  static const String versionCheckUrl = "https://oart2025-8bc89.web.app/latest-version.json";
 
   static Future<void> checkVersion(BuildContext context) async {
     try {
