@@ -22,7 +22,7 @@ class Page1P2 extends StatelessWidget {
       naiyo = kaicho;
     } else if(count == 1){
       title1 = "実行委員長挨拶";
-      title2 = "学術大会開催にあたり\n実行委員長　奥中雄策";
+      title2 = "実行委員長よりご挨拶\n実行委員長　奥中雄策";
       photo = "assets/images/jikkou.jpg";
       naiyo = jikkou;
     } else{
