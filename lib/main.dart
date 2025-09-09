@@ -11,7 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:url_launcher/url_launcher.dart';
+//import 'package:url_launcher/url_launcher.dart';
 
 final now = DateTime.now().toLocal();
 final kaisaiDay = DateTime(2025, 11, 16); //開始日
@@ -571,13 +571,16 @@ class VersionCheck {
         final data = json.decode(response.body);
         final latestVersion = data['latest_version'];
 
+        // 非同期処理後にウィジェットがまだ存在するか確認
+        if (!context.mounted) return;
+
         // バージョンを比較
         if (_isVersionOutdated(currentVersion, latestVersion)) {
           _showUpdateDialog(context, latestVersion);
         }
       }
     } catch (e) {
-      print("バージョンチェック中にエラーが発生しました: $e");
+      debugPrint("バージョンチェック中にエラーが発生しました: $e");
     }
   }
 

@@ -6,7 +6,7 @@ const List<Map<String, dynamic>> educationalLectures = [
 "sessionType": "司会", // このセッションでは司会と表示
 "moderator": ["大会長 藤田秀樹"],
 "moderator-j":["藤田秀樹"],
-  "moderator-e":["FUJIRA HIDEKI"],
+  "moderator-e":["FUJITA HIDEKI"],
   "presentations": [
 {
 "speaker": [
@@ -123,8 +123,8 @@ const List<Map<String,  dynamic>> publicLectures = [
 2016年–2017年 大阪公立大学大学院医学研究科 放射線診断学・IVR学 研究員
 
 ・プログラム医療機器承認
-医用画像解析ソフトウェア EIRL aneurysm (承認番号: 30100BZX00142000)
-医用画像解析ソフトウェア EIRL X-ray Lung nodule (承認番号: 30200BZX00269000)
+医用画像解析ソフトウェア aneurysm (承認番号: 30100BZX00142000)
+医用画像解析ソフトウェア X-ray Lung nodule (承認番号: 30200BZX00269000)
 
 ・表彰歴
 2022年12月　南部陽一郎記念若手奨励賞 大阪公立大学
@@ -150,9 +150,9 @@ const List<Map<String, dynamic>> lunchLectures = [
   "speaker-e": "MARUMARU SANKAKU"},],
 "theme": "クリニカルパスを変える可能性～フォトンカウンティングCTとAIの活用～",
 "abstract": '''
-　X線CTの進化は，画像診断学の進歩へと繋がり，その役割はさらに大きなものへと成長している。近年，Photon Counting CT（PCCT）に関する学術報告が飛躍的に増加しており，PCCTは次世代CTとして新たな画像診断の可能性が期待されている。
-　当社は，テルル化亜鉛カドミウム（CZT）を用いたPhoton Counting CTの開発を進めており，世界で４つの施設と連携し，PCCT実用化に向けた研究を行っている。高精細CT，Deep Learning再構成技術などの開発を通して得られてきた様々な技術と，X線阻止能や安定性の観点で優れた素質を持つCZT検出器とのシナジー効果により，キヤノンならではの次世代PCCTを目指す。
-　本日は，当社のPCCTに対する開発の取り組みとPCCTで得られた画像について紹介する。
+　X線CTの進化は，画像診断学の進歩へと繋がり，その役割はさらに大きなものへと成長している。近年，Photon Counting CT（CT）に関する学術報告が飛躍的に増加しており，CTは次世代CTとして新たな画像診断の可能性が期待されている。
+　当社は，テルル化亜鉛カドミウム（CZT）を用いたPhoton Counting CTの開発を進めており，世界で４つの施設と連携し，CT実用化に向けた研究を行っている。高精細CT，Deep Learning再構成技術などの開発を通して得られてきた様々な技術と，X線阻止能や安定性の観点で優れた素質を持つCZT検出器とのシナジー効果により，キヤノンならではの次世代CTを目指す。
+　本日は，当社のCTに対する開発の取り組みとCTで得られた画像について紹介する。
 ''',
 },
 {
@@ -162,9 +162,9 @@ const List<Map<String, dynamic>> lunchLectures = [
  "speaker-e": "SHIAKU SANKAKU"},],
 "theme": "Aquilion Riseの挑戦 －マルチポジション撮影×先進技術による新たなポテンシャル－",
 "abstract": '''
-　X線CTの進化は，画像診断学の進歩へと繋がり，その役割はさらに大きなものへと成長している。近年，Photon Counting CT（PCCT）に関する学術報告が飛躍的に増加しており，PCCTは次世代CTとして新たな画像診断の可能性が期待されている。
-　当社は，テルル化亜鉛カドミウム（CZT）を用いたPhoton Counting CTの開発を進めており，世界で４つの施設と連携し，PCCT実用化に向けた研究を行っている。高精細CT，Deep Learning再構成技術などの開発を通して得られてきた様々な技術と，X線阻止能や安定性の観点で優れた素質を持つCZT検出器とのシナジー効果により，キヤノンならではの次世代PCCTを目指す。
-　本日は，当社のPCCTに対する開発の取り組みとPCCTで得られた画像について紹介する。
+　X線CTの進化は，画像診断学の進歩へと繋がり，その役割はさらに大きなものへと成長している。近年，Photon Counting CT（CT）に関する学術報告が飛躍的に増加しており，CTは次世代CTとして新たな画像診断の可能性が期待されている。
+　当社は，テルル化亜鉛カドミウム（CZT）を用いたPhoton Counting CTの開発を進めており，世界で４つの施設と連携し，CT実用化に向けた研究を行っている。高精細CT，Deep Learning再構成技術などの開発を通して得られてきた様々な技術と，X線阻止能や安定性の観点で優れた素質を持つCZT検出器とのシナジー効果により，キヤノンならではの次世代CTを目指す。
+　本日は，当社のCTに対する開発の取り組みとCTで得られた画像について紹介する。
 ''',
 }
 ]}
@@ -188,9 +188,9 @@ const List<Map<String, dynamic>> generalResearchPresentations1 = [
 "abstract": '''【Purpose】
 　We attempted to evaluate the dose and image quality of a gonadal masking agent using bismuth to evaluate its usefulness as an alternative to lead during pediatric pelvic radiography.
 【Materials and method】
-　Based on the currently used pediatric abdomen X-ray examination conditions, SID was set to 100 cm, 76 kvp, 6.4 mAs Manual mode, and AEC was not used. The dosimeter was placed in the pelvic area of the human body model phantom, and this condition was set as the reference and irradiated 10 times. Lead and bismuth were used according to thickness, with 1 mm, 0.5 mm, and 0.25 mm of lead and 2, 4, and 6 layers of bismuth, respectively. The genital area was irradiated 10 times each, and the average incident dose was measured and analyzed for comparison. In addition, to measure the image quality of the acquired images, each SNR and CNR were calculated, and as a qualitative evaluation, the images of Shenton's line, one of the indicators used to determine hip joint dysplasia, were evaluated by two radiologists with experience. Evaluated by two radiologists with more than 15 years of experience.
+　Based on the currently used pediatric abdomen X-ray examination conditions, SID was set to 100 cm, 76 kvp, 6.4 mAs Manual mode, and AEC was not used. The dosimeter was placed in the pelvic area of the human body model phantom, and this condition was set as the reference and irradiated 10 times. Lead and bismuth were used according to thickness, with 1 mm, 0.5 mm, and 0.25 mm of lead and 2, 4, and 6 layers of bismuth, respectively. The genital area was irradiated 10 times each, and the average incident dose was measured and analyzed for comparison. In addition, to measure the image quality of the acquired images, each SNR and CNR were calculated, and as a qualitative evaluation, the images of ton's line, one of the indicators used to determine hip joint dysplasia, were evaluated by two radiologists with experience. Evaluated by two radiologists with more than 15 years of experience.
 【Result】
-　The reference average dose without shielding the reproductive area was 379.8 μGy, 1 mm of lead was 1.62 μGy, 0.5 mm of lead was 3.71 μGy, and 0.25 mm of lead was 20.61 μGy. In addition, 2 layers of bismuth was measured at 92.08 μGy, 4 layers at 39.59 μGy, and 6 layers at 20.85 μGy, and the dose reduction rate increased as the thickness of both lead and bismuth increased. The reference SNR was 14.59, 1 mm of lead was 11.88, 0.5 mm of lead was 10.04, 9.79 was 0.25 mm of lead, SNR for 2 layers of bismuth was 12.44, 4 layers was 12.20, and 6 layers was 11.47. Reference CNR is 3.07, 1 mm of lead is 0.38, 0.5 mm of lead is 1.02, 1.42 is 0.25 mm of lead, CNR of 2 layers of bismuth is 2.81, 4 layers is 2.76, and 6 layers is 2.28. Both SNR and CNR measurement values for bismuth shielding were measured higher and closer to the reference image values than for lead shielding. In the qualitative evaluation, the evaluation score of Shenton's line was evaluated as clear and smooth at the level of readability in 2- and 4-layer bismuth.
+　The reference average dose without shielding the reproductive area was 379.8 μGy, 1 mm of lead was 1.62 μGy, 0.5 mm of lead was 3.71 μGy, and 0.25 mm of lead was 20.61 μGy. In addition, 2 layers of bismuth was measured at 92.08 μGy, 4 layers at 39.59 μGy, and 6 layers at 20.85 μGy, and the dose reduction rate increased as the thickness of both lead and bismuth increased. The reference SNR was 14.59, 1 mm of lead was 11.88, 0.5 mm of lead was 10.04, 9.79 was 0.25 mm of lead, SNR for 2 layers of bismuth was 12.44, 4 layers was 12.20, and 6 layers was 11.47. Reference CNR is 3.07, 1 mm of lead is 0.38, 0.5 mm of lead is 1.02, 1.42 is 0.25 mm of lead, CNR of 2 layers of bismuth is 2.81, 4 layers is 2.76, and 6 layers is 2.28. Both SNR and CNR measurement values for bismuth shielding were measured higher and closer to the reference image values than for lead shielding. In the qualitative evaluation, the evaluation score of line was evaluated as clear and smooth at the level of readability in 2- and 4-layer bismuth.
 【Conclusion】
 　Bismuth material is softer and lighter than lead, so it is more comfortable for pediatric patients, and it is believed that it can help reduce the possibility of compromising image quality, movement due to anxiety, and repetitive radiograph.
 ''',
@@ -331,7 +331,7 @@ const List<Map<String, dynamic>> generalResearchPresentations2 = [
 【目的】
 本実験では、空気中のα線のエネルギー減衰の様子をエネルギースペクトルから示すことを目的とした。
 【方法】
-検出器としてAdvacam社製MiniPIX EDU kitを用い、Am-241α線源からのα線を計測した。はじめに、線源を設置せずに10分間のバックグラウンド（B.G.）を計測した。その後、線源と検出器との距離（以下、測定距離）を変更しながらα線、γ線のクラスター、の計測を行った。測定距離は2 mmから2 mm間隔で24 mmまで、各測定距離でのα線のクラスターが100,000 countsになるまで計測を行った。その後、26 mmから2 mm間隔で32 mmまで、そして、36 mm、39 mmまで10分間の計測を行った。こうして得たエネルギースペクトルをテキスト化して保存し、Excelにて測定距離ごとのα線の総エネルギー、α粒子数を得た。α線の総エネルギーを計算しα粒子数で割ることで各測定距離におけるでの単一α粒子一つのあたりの平均エネルギーを得た。
+検出器としてAd社製MiniPIX EDU kitを用い、Am-241α線源からのα線を計測した。はじめに、線源を設置せずに10分間のバックグラウンド（B.G.）を計測した。その後、線源と検出器との距離（以下、測定距離）を変更しながらα線、γ線のクラスター、の計測を行った。測定距離は2 mmから2 mm間隔で24 mmまで、各測定距離でのα線のクラスターが100,000 countsになるまで計測を行った。その後、26 mmから2 mm間隔で32 mmまで、そして、36 mm、39 mmまで10分間の計測を行った。こうして得たエネルギースペクトルをテキスト化して保存し、Excelにて測定距離ごとのα線の総エネルギー、α粒子数を得た。α線の総エネルギーを計算しα粒子数で割ることで各測定距離におけるでの単一α粒子一つのあたりの平均エネルギーを得た。
 【結果】
 10分間のB.G.での平均エネルギーは804keVであった。また線源ありでは、測定距離2mmでの平均エネルギーは3312keV、6 mmで3109keV、10 mmで2721keV、14 mmで2239keV、18 mmで1557keV、22 mmで1429keV、26 mmで887keV、28 mmで718keV、32 mmで600keV、36 mmで951keVであり、エネルギーの減衰が観察された。
 【結論】
