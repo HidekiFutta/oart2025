@@ -11,7 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-//import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final now = DateTime.now().toLocal();
 final kaisaiDay = DateTime(2025, 11, 16); //開始日
@@ -85,14 +85,112 @@ class MyHomePage extends StatefulWidget {
   MyHomePageState createState() => MyHomePageState();
 }
 
-class MyHomePageState extends State<MyHomePage> {
+//class MyHomePageState extends State<MyHomePage> {
+//  @override
+//  void initState() {
+//    super.initState();
+    //_checkForVersionUpdate(); // アプリ起動時にバージョンチェックを実行
+//    VersionCheck.checkVersion(context);//チェックをアプリ起動時に呼び出す
+   //initState メソッドで実行する:
+//  }
+
+class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
+  bool _updateDialogShown = false; // 追加：一度だけ表示するフラグ
 
   @override
   void initState() {
     super.initState();
-    //_checkForVersionUpdate(); // アプリ起動時にバージョンチェックを実行
-    VersionCheck.checkVersion(context);//チェックをアプリ起動時に呼び出す
-    //initState メソッドで実行する:
+    WidgetsBinding.instance.addObserver(this);
+    _checkForUpdateOnce();
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      _checkForUpdateOnce();
+    }
+  }
+
+  Future<void> _checkForUpdateOnce() async {
+    if (_updateDialogShown) return; // 既に表示済みなら何もしない
+    await _checkForUpdate(context);
+  }
+
+  /// バージョンチェック処理
+  Future<void> _checkForUpdate(BuildContext context) async {
+    try {
+      // 1. Firebase Hosting 上の JSON を取得
+      final response = await http.get(Uri.parse(
+          "https://oart2025-8bc89.web.app/latest-version.json"));
+
+      if (response.statusCode != 200) return;
+
+      final data = jsonDecode(response.body);
+      final String latestVersion = data["latest_version"];
+      final String? message = data["message"];
+
+      // 2. 現在のアプリバージョンを取得
+      final packageInfo = await PackageInfo.fromPlatform();
+      final currentVersion = packageInfo.version;
+
+      // 3. バージョン比較
+      if (_isVersionOlder(currentVersion, latestVersion)) {
+        _updateDialogShown = true; // 表示フラグを立てる
+
+        // 4. ダイアログ表示
+        if (context.mounted) {
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: Text("アップデートのお知らせ"),
+              content: Text(
+                  message ?? "新しいバージョン $latestVersion が公開されています。アップデートしてください。"),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: Text("あとで"),
+                ),
+                TextButton(
+                  onPressed: () async {
+                    final Uri url = Uri.parse(
+                      Theme.of(context).platform == TargetPlatform.iOS
+                          ? "https://apps.apple.com/us/app/oart2025/id6751011903"
+                          : "https://play.google.com/apps/test/com.my.oart/14",
+                    );
+                    if (await canLaunchUrl(url)) {
+                      await launchUrl(url, mode: LaunchMode.externalApplication);
+                    }
+                  },
+                  child: Text("アップデート"),
+                ),
+              ],
+            ),
+          );
+        }
+      }
+    } catch (e) {
+      debugPrint("バージョン確認エラー: $e");
+    }
+  }
+
+  /// バージョン文字列を比較する関数
+  bool _isVersionOlder(String current, String latest) {
+    final currentParts = current.split('.').map(int.parse).toList();
+    final latestParts = latest.split('.').map(int.parse).toList();
+
+    for (int i = 0; i < latestParts.length; i++) {
+      final c = i < currentParts.length ? currentParts[i] : 0;
+      final l = latestParts[i];
+      if (c < l) return true;
+      if (c > l) return false;
+    }
+    return false;
   }
 
   @override
