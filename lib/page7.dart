@@ -56,7 +56,7 @@ class Page7 extends StatelessWidget {
                       "投票はWebからのみ行います",
                       style: TextStyle(
                         fontFamily: 'NotoSansJP',
-                        height: 1.6, // heightプロパティを追加。 任意の値を設定して調整する
+                        height: 1.6, // heightプロパティを追加． 任意の値を設定して調整する
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.normal,
@@ -71,7 +71,7 @@ class Page7 extends StatelessWidget {
                       naiyo,
                       style: const TextStyle(
                         fontFamily: 'NotoSansJP',
-                        height: 1.4, // heightプロパティを追加。 任意の値を設定して調整する
+                        height: 1.4, // heightプロパティを追加． 任意の値を設定して調整する
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
                         fontStyle: FontStyle.normal,

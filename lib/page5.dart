@@ -5,7 +5,7 @@ import 'dart:collection'; //SplayTreeMap for sorting
 import 'utils.dart'; // generateMemoKey関数をインポート
 import 'package:auto_size_text/auto_size_text.dart';
 
-// 各データリストから講師と座長の情報を抽出し、Mapに格納する
+// 各データリストから講師と座長の情報を抽出し，Mapに格納する
 Map<String, Map<String, String>> extractSpeakers() {
   Map<String, Map<String, String>> speakers = {};
 
@@ -91,7 +91,7 @@ class Page5 extends StatelessWidget {
       body: ListView.builder(
         itemCount: sortedSpeakers.length,
         itemBuilder: (context, index) {
-          // ソート後のキー（ローマ字名）と値（役割、和名、タイトル、抄録）を取得
+          // ソート後のキー（ローマ字名）と値（役割，和名，タイトル，抄録）を取得
           String nameE = sortedSpeakers.keys.elementAt(index);
           String role = sortedSpeakers[nameE]?["role"] ?? "";
           String name = sortedSpeakers[nameE]?["name"] ?? "";
@@ -144,7 +144,7 @@ class Page5 extends StatelessWidget {
                     builder: (BuildContext context) {
                       return AlertDialog(
                         //title: const Text("お知らせ"),
-                        content: const Text("司会・座長には抄録はございません。"),
+                        content: const Text("司会・座長には抄録はございません．"),
                         actions: <Widget>[
                           TextButton(
                             onPressed: () {

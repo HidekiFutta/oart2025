@@ -49,7 +49,7 @@ Future<Position> determinePosition() async {
   }
   if (permission == LocationPermission.deniedForever) {
     // Permissions are denied forever, handle appropriately.
-    return Future.error('位置情報取得が拒否されており、許可を要求できない');
+    return Future.error('位置情報取得が拒否されており，許可を要求できない');
   }
   // When we reach here, permissions are granted and we can
   // continue accessing the position of the device.

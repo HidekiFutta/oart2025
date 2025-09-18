@@ -34,9 +34,9 @@
 
     <!-- 位置情報の許可メッセージ -->
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>このアプリは、学会会場の位置を地図上に表示し、現在地からの最短ルートを提供するために位置情報を使用します。</string>
+    <string>このアプリは，学会会場の位置を地図上に表示し，現在地からの最短ルートを提供するために位置情報を使用します．</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>このアプリケーションは、学会会場の位置を地図上に表示し、現在地から会場までナビゲーションを行うために位置情報を利用します。</string>
+    <string>このアプリケーションは，学会会場の位置を地図上に表示し，現在地から会場までナビゲーションを行うために位置情報を利用します．</string>
 
     <!-- アプリのUI設定 -->
     <key>UILaunchStoryboardName</key>

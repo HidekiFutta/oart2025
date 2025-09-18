@@ -17,7 +17,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions cd ..while build-number is used as the build suffix.
-version: 1.4.3
+version: 1.4.4
 environment:
   sdk: '>=3.3.4 <4.0.0'
 
@@ -59,7 +59,7 @@ dependencies:
   http: ^1.5.0
   # 投票機能のため5/26この行を追加
   #cloud_firestore: ^5.0.2
-  # firebase_coreを使う場合、こちらの行に変更する
+  # firebase_coreを使う場合，こちらの行に変更する
   # firebase_core: "^1.0.0"
   # cloud_firestore: "^1.0.0"
 
@@ -73,7 +73,7 @@ flutter_icons:
 dev_dependencies:
   #flutter_test:
   #  sdk: flutter
-    # 上の二行はiOs（CodeMagicでエラーが出たため、コメントアウトした20250818　）
+    # 上の二行はiOs（CodeMagicでエラーが出たため，コメントアウトした20250818　）
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

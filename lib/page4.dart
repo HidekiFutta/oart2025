@@ -159,7 +159,7 @@ class LectureSection extends StatelessWidget {
   // 司会者リストを整形して改行と施設名揃えを行う関数
   String _formatModeratorWithAlignment(dynamic moderator) {
     if (moderator is List<String>) {
-      // 施設名と名前を分離し、施設名の最大長を取得
+      // 施設名と名前を分離し，施設名の最大長を取得
       List<List<String>> splitModerator = moderator.map((moderator) {
         final parts = moderator.split(" "); // 施設名と名前を分離
         return [
@@ -179,10 +179,10 @@ class LectureSection extends StatelessWidget {
       "${mod[0].padRight(maxInstitutionLength)} ${mod[1]}") // 施設名を右揃えに調整
           .join("\n"); // 改行で区切る
     } else if (moderator is String) {
-      // 単一の文字列の場合、そのまま返す
+      // 単一の文字列の場合，そのまま返す
       return moderator;
     } else {
-      // 不明な形式の場合、空文字列を返す
+      // 不明な形式の場合，空文字列を返す
       return "";
     }
   }

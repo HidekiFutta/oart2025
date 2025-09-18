@@ -39,7 +39,7 @@ class Page1P1 extends StatelessWidget {
                 '「技術革新と共に歩む」',
                 style: TextStyle(
                   fontFamily: 'NotoSansJP',
-                  height: 1.0, // heightプロパティを追加。 任意の値を設定して調整する
+                  height: 1.0, // heightプロパティを追加． 任意の値を設定して調整する
                   fontSize: 22,
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
@@ -51,7 +51,7 @@ class Page1P1 extends StatelessWidget {
                 '～診療放射線技師としての成長と挑戦～',
                 style: TextStyle(
                   fontFamily: 'NotoSansJP',
-                  height: 1.2, // heightプロパティを追加。 任意の値を設定して調整する
+                  height: 1.2, // heightプロパティを追加． 任意の値を設定して調整する
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
@@ -67,7 +67,7 @@ class Page1P1 extends StatelessWidget {
                9:30　会場受付開始''',
                 style: TextStyle(
                   fontFamily: 'NotoSansJP',
-                  height: 1.2, // heightプロパティを追加。 任意の値を設定して調整する
+                  height: 1.2, // heightプロパティを追加． 任意の値を設定して調整する
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
@@ -81,7 +81,7 @@ class Page1P1 extends StatelessWidget {
                 '会 場：アートホテル大阪ベイタワー\n　　　 4階ボールルーム',
                 style: TextStyle(
                   fontFamily: 'NotoSansJP',
-                  height: 1.2, // heightプロパティを追加。 任意の値を設定して調整する
+                  height: 1.2, // heightプロパティを追加． 任意の値を設定して調整する
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,

@@ -7,7 +7,7 @@ flutter --verbose assemble --no-version-check --depfile C:\Users\hima71f\StudioP
 
 ## exception
 
-PathAccessException: PathAccessException: Cannot delete file, path = 'C:\Users\hima71f\StudioProjects\test2\build\app\intermediates\flutter\debug\flutter_assets\assets/images/home.png' (OS Error: アクセスが拒否されました。
+PathAccessException: PathAccessException: Cannot delete file, path = 'C:\Users\hima71f\StudioProjects\test2\build\app\intermediates\flutter\debug\flutter_assets\assets/images/home.png' (OS Error: アクセスが拒否されました．
 , errno = 5)
 
 ```

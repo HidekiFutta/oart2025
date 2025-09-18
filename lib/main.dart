@@ -150,7 +150,7 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
             builder: (context) => AlertDialog(
               title: Text("アップデートのお知らせ"),
               content: Text(
-                  message ?? "新しいバージョン $latestVersion が公開されています。アップデートしてください。"),
+                  message ?? "新しいバージョン $latestVersion が公開されています．アップデートしてください．"),
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(context),
@@ -299,7 +299,7 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                               style: TextStyle(
                                 fontFamily: 'SFProDisplay',
                                 color: Color(0xFF000000),
-                                height: 1.6, // heightプロパティを追加。 任意の値を設定して調整する
+                                height: 1.6, // heightプロパティを追加． 任意の値を設定して調整する
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
@@ -333,7 +333,7 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                               style: TextStyle(
                                 fontFamily: 'SFProDisplay',
                                 color: Color(0xFF000000),
-                                height: 1.6, // heightプロパティを追加。 任意の値を設定して調整する
+                                height: 1.6, // heightプロパティを追加． 任意の値を設定して調整する
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
@@ -423,7 +423,7 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                               style: TextStyle(
                                 fontFamily: 'SFProDisplay',
                                 color: Color(0xFF000000),
-                                height: 1.6, // heightプロパティを追加。 任意の値を設定して調整する
+                                height: 1.6, // heightプロパティを追加． 任意の値を設定して調整する
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
@@ -457,7 +457,7 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                               style: TextStyle(
                                 fontFamily: 'SFProDisplay',
                                 color: Color(0xFF000000),
-                                height: 1.6, // heightプロパティを追加。 任意の値を設定して調整する
+                                height: 1.6, // heightプロパティを追加． 任意の値を設定して調整する
                                 fontSize: 16,
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
@@ -551,7 +551,7 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                               style: TextStyle(
                                 fontFamily: 'SFProDisplay',
                                 color: Color(0xFF000000),
-                                height: 1.6, // heightプロパティを追加。 任意の値を設定して調整する
+                                height: 1.6, // heightプロパティを追加． 任意の値を設定して調整する
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
@@ -585,7 +585,7 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                               style: TextStyle(
                                 fontFamily: 'SFProDisplay',
                                 color: Color(0xFF000000),
-                                height: 1.6, // heightプロパティを追加。 任意の値を設定して調整する
+                                height: 1.6, // heightプロパティを追加． 任意の値を設定して調整する
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
@@ -702,7 +702,7 @@ class VersionCheck {
       builder: (context) {
         return AlertDialog(
           title: const Text('アップデートのお知らせ'),
-          content: Text('新しいバージョン ($latestVersion) が利用可能です。oart2025を検索して更新してください。'),
+          content: Text('新しいバージョン ($latestVersion) が利用可能です．oart2025を検索して更新してください．'),
         );
       },
     );

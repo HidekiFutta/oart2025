@@ -25,7 +25,7 @@ class Page1P3 extends StatelessWidget {
     // countに基づいてデータを取得
     final Map<String, String> data = pageTexts[count ?? 6] ?? {
       "title": "データが見つかりません",
-      "content": "指定されたデータが存在しません。",
+      "content": "指定されたデータが存在しません．",
     };
 
     final String title = data["title"]!;
