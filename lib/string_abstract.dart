@@ -73,7 +73,7 @@ const List<Map<String,  dynamic>> specialLectures = [
 　一方で，AI学習のためのデータ活用基盤は未だ課題が多い．米国を含め世界的には医療データの集約と標準化が進んでいるのに対し，日本では病院やベンダーごとに電子カルテの仕様が異なりデータ連携が難しいことや，個人情報保護に関わる制約がボトルネックとなっている．これに対し，学会主導のJ-MID（日本医用画像データベース）や関連法制度が整備されつつあり，データ利活用の基盤構築が進展している．
 　本講演では，最新の研究成果とAI普及の状況に基づき，日本における課題を理解し，解決に向けての展望を解説する．日常診療でのデータ蓄積が将来のAIの性能につながることを踏まえ，現場で実践可能な工夫や協働のあり方を共に考える機会としたい．
 　
-＜略歴＞佐藤 淳哉（さとう　じゅんや）
+＜略歴＞佐藤 淳哉（さとう じゅんや）
 ・学歴
 2020年　3月	大阪大学 医学部医学科 卒業
 2020年　4月	大阪労災病院 初期研修医
@@ -173,9 +173,10 @@ const List<Map<String, dynamic>> generalResearchPresentations1 = [
 "id": "educational_5", // セッションID
 "title": "一般演題発表①",
 "sessionType": "座長", // このセッションでは座長と表示
-"moderator": ["実行委員　西尾 優志"],
-  "moderator-j": ["西尾 優志"],
-  "moderator-e": ["NISHIO MASASHI"],
+
+"moderator":["実行委員　中平 修司"],
+  "moderator-j": ["中平 修司"],
+  "moderator-e": ["NAKAHIRA SHUJI"],
 "presentations": [
 {
 "speaker": [
@@ -219,7 +220,7 @@ const List<Map<String, dynamic>> generalResearchPresentations1 = [
   {"name":"森ノ宮医療大学　佐藤　蓮",
     "speaker-j": "佐藤　蓮",
     "speaker-e": "SATOH REN"}],
-    "theme": "【研究】当院におけるMRI 3D Bone image撮像の取り組み",
+    "theme": "【研究】人体模擬ファントムを用いたCT画像の空間的ノイズ分布評価",
     "abstract": '''
 【背景・目的】
 　逐次近似再構成法（IR）で再構成された画像は非線形な処理が行われており，対象物によって画質特性が変化する．このような画像を評価するための手法としてノイズマップが報告されている．ノイズマップを用いたこれまでの研究では，コントラストの異なる物質によりIRの画像処理が変化することが報告されているが，主に単純な構造のファントムを使用しており，人体のような複雑な構造では異なる画像処理が行われる可能性がある．そこで本研究では，人体模擬ファントムを用いてCT画像のノイズ均一性に対するIRの影響を明らかにすることを目的とした．
@@ -290,10 +291,9 @@ const List<Map<String, dynamic>> generalResearchPresentations2 = [
 "id": "educational_6", // セッションID
 "title": "一般演題発表②",
 "sessionType": "座長", // このセッションでは座長と表示
-"moderator":[
-"実行委員　中平 修司"],
-"moderator-j":["中平 修司"],
-"moderator-e":["NAKAHIRA SHUJI"],
+"moderator": ["実行委員　西尾 優志"],
+"moderator-j": ["西尾 優志"],
+"moderator-e": ["NISHIO MASASHI"],
 "presentations": [
       {
         "speaker": [
