@@ -18,7 +18,7 @@ const List<Map<String, dynamic>> educationalLectures = [
 　中期・短期目標としては，すでに多くの項目が達成されている．組織率向上のため，オンラインコンテンツの無料化や新規入会システムの簡便化，若者向け広報戦略の導入など，さまざまな取り組みを実施してきた．一方，70％を目指している組織率は，2024年には60％を超える値に達したが，医療に従事する診療放射線技師数の統計データが更新され診療放射線技師数が増加し，会員絶対数は増えているが，組織率は低下するといった結果になった．これまで以上に入会促進を啓発する必要がある．また，これまで十分でなかった予防医療についての事業を推進するため，健診部門のラダー作成に着手した．さらに，組織のスリム化を図るため，学術大会のあり方を見直し2日間開催を決定した．また認定事業を行っていない分科会の廃止，活動が活発でより専門的な活動を望む分科会は承認学会への移行も進めてきた．事務局体制の強化では，専門職の採用や業務のDX化を進め，組織基盤を固めている．
 　今後の展望として，診療放射線技師を取り巻く環境は大きく変化している．現在，人口減少に伴い，地方では医療経営が困難な医療施設が多く，診療放射線技師の不足も問題となっている．しかし，厚生労働科研報告によれば，2040年以降には全国的に診療放射線技師が供給過多となることが予測されている．都市部と地方の状況の違いを意識した将来展望が必要となっている．
 　このような状況を踏まえると，様々な課題について診療放射線技師業界だけでの解決が困難な課題も少なくない．医療行政において診療放射線技師業界の課題解決が十分できるよう，官公庁への診療放射線技師派遣をこれまで以上に強化する必要がある．
-　JART Vision2040では「国民から求められる新たな役割の獲得」という長期目標をさらに推進するために，診療放射線技師の業務が放射線領域にとどまらず，幅広い医療分野に広がること，また医療施設以外での活躍の場を開拓するなど多様なキャリアパスを構築し，職能の価値をさらに高めることが必要である．
+　JART Vision 2040では「国民から求められる新たな役割の獲得」という長期目標をさらに推進するために，診療放射線技師の業務が放射線領域にとどまらず，幅広い医療分野に広がること，また医療施設以外での活躍の場を開拓するなど多様なキャリアパスを構築し，職能の価値をさらに高めることが必要である．
 
 ＜略歴＞上田 克彦 (うえだ かつひこ)
 ・昭和34年4月19日（66歳）
@@ -66,7 +66,7 @@ const List<Map<String,  dynamic>> specialLectures = [
 "speaker": [
 {"name":"The University of Texas MD Anderson Cancer Center　佐藤淳哉",
   "speaker-j": "佐藤　淳哉",
-  "speaker-e": "SATOH JUNYA"}],
+  "speaker-e": "SATO JUNYA"}],
 "theme": "日本における放射線AIの現在地と将来展望",
 "abstract": '''　日米における放射線AI技術の現状と将来展望について概説する．近年，深層学習を用いた撮像技術や診断支援システムの実用化が急速に進んでいる．前所属である大阪大学人工知能画像診断学講座は，AIによる高度な診断技術の普及を目的として研究を実施してきた．特に，十分な学習データを用意することが難しいという医療AI特有の制約に対して，画像が本来もつ情報を活用する自己教師あり学習を使用し性能を向上させてきた．
 　また，近年の大規模言語モデルの発展を受け，放射線科医の読影レポートに含まれる疾患情報を言語モデルで抽出し，AI学習に再利用する取り組みも進めている．この方法により，腹部CTにおける多臓器異常検出で高い汎化性能を確認した．既存の医療情報を活用してアノテーション負担を軽減しつつ高性能化を図ることが，現在の主要な潮流となりつつある．
@@ -143,7 +143,7 @@ const List<Map<String, dynamic>> lunchLectures = [
 "sessionType": "司会", // このセッションでは司会と表示
 "moderator": ["実行委員　大西 麻衣"],
   "moderator-j": ["大西 麻衣"],
-  "moderator-e": ["OHNISHI MAI"],
+  "moderator-e": ["ONISHI MAI"],
 "presentations": [
 {
 "speaker": [
@@ -159,7 +159,7 @@ const List<Map<String, dynamic>> lunchLectures = [
 "speaker": [
 {"name":"キヤノンメディカルシステムズ（株）",
  "speaker-j": "伊藤 雄也",
- "speaker-e": "ITOH YUYA"},],
+ "speaker-e": "ITO YUYA"},],
 "theme": "Aquilion Riseの挑戦 －マルチポジション撮影×先進技術による新たなポテンシャル－",
 "abstract": '''
 　ランチョンセミナーには抄録はございません．
@@ -182,7 +182,7 @@ const List<Map<String, dynamic>> generalResearchPresentations1 = [
 "speaker": [
 {"name":"医療法人高遼会高遼会病院　佐野 瑛人",
   "speaker-j": "佐野 瑛人",
-  "speaker-e": "SATOH ****"}],
+  "speaker-e": "SANO EITO"}],
 "theme": "【報告】当院におけるMRI 3D Bone image撮像の取り組み",
 "abstract": '''
 【目的】
@@ -219,7 +219,7 @@ const List<Map<String, dynamic>> generalResearchPresentations1 = [
     "speaker": [
   {"name":"森ノ宮医療大学　佐藤　蓮",
     "speaker-j": "佐藤　蓮",
-    "speaker-e": "SATOH REN"}],
+    "speaker-e": "SATO REN"}],
     "theme": "【研究】人体模擬ファントムを用いたCT画像の空間的ノイズ分布評価",
     "abstract": '''
 【背景・目的】
@@ -253,7 +253,7 @@ const List<Map<String, dynamic>> generalResearchPresentations1 = [
         "speaker": [
         {"name":"森ノ宮医療大学　大野 葵子",
         "speaker-j": "大野 葵子",
-        "speaker-e": "OHNO ****"}],
+        "speaker-e": "ONO AKO"}],
         "theme": "【報告】マンモグラフィにおける撮影時の最適圧迫圧について：乳房ファントムによる検討",
         "abstract": '''
 【目的】
@@ -271,7 +271,7 @@ const List<Map<String, dynamic>> generalResearchPresentations1 = [
     "speaker": [
       {"name":"森ノ宮医療大学　織田 卓杜",
         "speaker-j": "織田 卓杜",
-        "speaker-e": "ODA ****"}],
+        "speaker-e": "ODA TAKUTO"}],
     "theme": "【研究】胸部X線画像読影における視線解析について",
     "abstract": '''
 【目的】
@@ -293,7 +293,7 @@ const List<Map<String, dynamic>> generalResearchPresentations2 = [
 "sessionType": "座長", // このセッションでは座長と表示
 "moderator": ["実行委員　西尾 優志"],
 "moderator-j": ["西尾 優志"],
-"moderator-e": ["NISHIO MASASHI"],
+"moderator-e": ["NISHIO YUJI"],
 "presentations": [
       {
         "speaker": [
@@ -318,7 +318,7 @@ const List<Map<String, dynamic>> generalResearchPresentations2 = [
         "speaker": [
         {"name":"森ノ宮医療大学　辻 叶夢",
         "speaker-j": "辻 叶夢",
-        "speaker-e": "TSUJI ****"}],
+        "speaker-e": "TSUJI KANAMU"}],
         "theme": "【研究】標準計測法12からリニアック標準計測法24への移行によるX線の校正深水吸収線量の比較検討",
         "abstract": '''
 【目的】
@@ -354,7 +354,7 @@ const List<Map<String, dynamic>> generalResearchPresentations2 = [
         "speaker": [
       {"name":"大阪ハイテクノロジー専門学校　山本 彩未",
         "speaker-j": "山本 彩未",
-        "speaker-e": "YAMAMOTO ****"}],
+        "speaker-e": "YAMAMOTO AMI"}],
         "theme": "【報告】放射線検査への導入に向けた音声認識入力システム開発の提案－生成AIを用いて専門知識ゼロから作り出した簡易方法－",
         "abstract": '''
 【背景】 
@@ -372,7 +372,7 @@ const List<Map<String, dynamic>> generalResearchPresentations2 = [
         "speaker": [
       {"name":"大阪ハイテクノロジー専門学校　堀江 唯斗",
         "speaker-j": "堀江 唯斗",
-        "speaker-e": "HORIE ****"}],
+        "speaker-e": "HORIE YUITO"}],
         "theme": "【研究】X線画像解析によるX線防護衣の損傷評価と管理基準設定の可能性の検討",
         "abstract": '''
 【目的】
