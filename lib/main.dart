@@ -45,15 +45,15 @@ final String hyouji = hyouJi();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
-    systemNavigationBarColor: Colors.transparent,
-    systemNavigationBarContrastEnforced: false,
-    statusBarIconBrightness: Brightness.dark,
-    systemNavigationBarIconBrightness: Brightness.dark,
-  ));
-  // エッジツーエッジ有効化
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+  // システムUIのスタイル設定（非推奨APIを避けるため色は指定しない）
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent, // ステータスバーを透過
+      systemNavigationBarColor: Colors.transparent, // ナビゲーションバーを透過
+      statusBarIconBrightness: Brightness.dark, // アイコンの見え方調整
+      systemNavigationBarIconBrightness: Brightness.dark,
+  ));
+
   runApp(const MyApp());
 }
 
@@ -70,7 +70,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const MyHomePage(title: ''),
+      home: SafeArea(
+        child:const MyHomePage(title: ''),
+    ),
     );
   }
 }
@@ -130,7 +132,7 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       if (_isVersionOlder(currentVersion, latestVersion)) {
         _updateDialogShown = true;
 
-        //if (!mounted) return; // ← context安全確認
+        if (!mounted) return; // ← context安全確認
         if (context.mounted) {
           showDialog(
             context: context,
@@ -151,7 +153,7 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                           Theme
                               .of(context)
                               .platform == TargetPlatform.iOS
-                              ? "https://apps.apple.com/jp/app/app-id" // iOS用
+                              ? "https://apps.apple.com/jp/app/id6751011903" // iOS用
                               : "https://play.google.com/store/apps/details?id=com.my.oart", // Android用
                         );
                         if (await canLaunchUrl(url)) {
