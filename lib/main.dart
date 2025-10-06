@@ -45,11 +45,12 @@ final String hyouji = hyouJi();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+  //SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   // システムUIのスタイル設定（非推奨APIを避けるため色は指定しない）
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent, // ステータスバーを透過
       systemNavigationBarColor: Colors.transparent, // ナビゲーションバーを透過
+      systemNavigationBarContrastEnforced: false, // コントラストを無効化（必要に応じて設定）
       statusBarIconBrightness: Brightness.dark, // アイコンの見え方調整
       systemNavigationBarIconBrightness: Brightness.dark,
   ));
@@ -70,9 +71,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: SafeArea(
-        child:const MyHomePage(title: ''),
-    ),
+     // home: SafeArea(
+      //  child:const MyHomePage(title: ''),
+     // ),
+      home: const MyHomePage(title: ''),
+
     );
   }
 }
