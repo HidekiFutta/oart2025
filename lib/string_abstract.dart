@@ -147,7 +147,7 @@ const List<Map<String, dynamic>> lunchLectures = [
 "presentations": [
 {
 "speaker": [
-{"name":"シーメンスヘルスケア（株）",
+{"name":"シーメンスヘルスケア（株）桃沢 芳典",
   "speaker-j": "桃沢 芳典",
   "speaker-e": "MOMOZAWA YOSHINORI"},],
 "theme": "クリニカルパスを変える可能性～フォトンカウンティングCTとAIの活用～",
@@ -157,7 +157,7 @@ const List<Map<String, dynamic>> lunchLectures = [
 },
 {
 "speaker": [
-{"name":"キヤノンメディカルシステムズ（株）",
+{"name":"キヤノンメディカルシステムズ（株）伊藤 雄也",
  "speaker-j": "伊藤 雄也",
  "speaker-e": "ITO YUYA"},],
 "theme": "Aquilion Riseの挑戦 －マルチポジション撮影×先進技術による新たなポテンシャル－",

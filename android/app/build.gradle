@@ -19,7 +19,7 @@ if (flutterVersionCode == null) {
 
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
-    flutterVersionName = '1.5.9'
+    flutterVersionName = '1.6.0'
 }grep
 
 def keystoreProperties = new Properties()
@@ -60,7 +60,7 @@ android {
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
-        String stringValue = "159"
+        String stringValue = "160"
         int intValue = Integer.parseInt(stringValue)
         versionCode = intValue//flutterVersionCode.toInteger()//'11' 17行目が効いている!!!
         versionName flutterVersionName
